@@ -203,7 +203,7 @@ const Tractor = () => {
           <div className="flex justify-start">
             <div className="mb-4 mr-[600px]">
               <label className="text-base font-bold bg-gray-200 p-1 rounded">
-                Taka In Words :{" "}
+                Taka In Words : {" "}
               </label>
               {numberToWords(totalAmount)}
             </div>
