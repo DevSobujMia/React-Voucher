@@ -1,0 +1,90 @@
+.body {
+  width: 1200px;
+  position: relative;
+  margin: 50px auto;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 2px solid #5d5e60;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: serif;
+  overflow: hidden;
+}
+
+.body::before {
+  content: "";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  background-image: url("https://img.freepik.com/premium-photo/black-white-drawing-tractor-with-large-tires-generative-ai_899894-70582.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Adjust the opacity as needed */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.header,
+.table-container,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.input-field {
+  position: relative;
+  z-index: 1;
+}
+
+/* Print-specific styles */
+/* Hide action columns */
+@media print {
+  .remove-col,
+  .add-row-btn,
+  .navbar-ignore,
+  .print-button {
+    display: none;
+  }
+
+  /* Ensure body styles are applied for print */
+  .body {
+    width: 1100px;
+    position: relative;
+    margin: 50px auto;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid #5d5e60;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    font-family: serif;
+    overflow: hidden;
+  }
+
+  /* Adjust background image for print */
+  .body::before {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    background-image: url("https://img.freepik.com/premium-photo/black-white-drawing-tractor-with-large-tires-generative-ai_899894-70582.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Adjust the opacity as needed */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+}
